@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RotatableBitmapRep.h"
+#import "BitmapContextRep.h"
 #import "UIImage+ANImageBitmapRep.h"
 
 typedef struct {
@@ -20,7 +20,7 @@ typedef struct {
 BMPixel BMPixelMake (CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
 UIColor * UIColorFromBMPixel (BMPixel pixel);
 
-@interface ANImageBitmapRep : RotatableBitmapRep {
+@interface ANImageBitmapRep : BitmapContextRep {
     
 }
 
@@ -32,13 +32,6 @@ UIColor * UIColorFromBMPixel (BMPixel pixel);
  * an "inverted" effect.
  */
 - (void)invertColors;
-
-/**
- * Scales the image down, then back up again.  Use this to blur an image.
- * @param quality A percentage from 0 to 1, 0 being horrible quality, 1 being
- * perfect quality.
- */
-- (void)setQuality:(CGFloat)quality;
 
 /**
  * Darken or brighten the image.

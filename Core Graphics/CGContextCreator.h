@@ -9,15 +9,19 @@
 #import <Foundation/Foundation.h>
 
 /**
- * This class has several static methods for creating bitmap contexts.
+ * This class has several static functions for creating bitmap contexts.
  * These methods are pretty much only called when creating a new
  * ANImageBitmapRep.
  */
-@interface CGContextCreator : NSObject {
-    
-}
 
-+ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size;
-+ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image;
+CGContextRef newARGBBitmapContextWithSize(CGSize size);
+CGContextRef newARGBBitmapContextWithImage(CGImageRef image);
+
+__attribute__((deprecated("No need for class to do this, use functions instead")))
+@interface CGContextCreator : NSObject {
+   
+}
++ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size __attribute__((deprecated));
++ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image __attribute__((deprecated));
 
 @end

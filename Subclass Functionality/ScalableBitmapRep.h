@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BitmapContextRep.h"
+#import "ANImageBitmapRep.h"
 
 
-@interface ScalableBitmapRep : BitmapContextRep {
-    
-}
+@interface ANImageBitmapRep (Scalable)
 
 /**
  * Stretches the bitmap context to a specified size.
@@ -21,6 +19,13 @@
  * will not be changed.
  */
 - (void)setSize:(BMPoint)aSize;
+
+/**
+ * Scales the image down, then back up again.  Use this to blur an image.
+ * @param quality A percentage from 0 to 1, 0 being horrible quality, 1 being
+ * perfect quality.
+ */
+- (void)setQuality:(CGFloat)quality;
 
 /**
  * Scales the image to fit a particular frame without stretching (bringing out of scale).

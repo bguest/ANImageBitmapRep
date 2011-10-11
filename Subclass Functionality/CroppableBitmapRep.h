@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ScalableBitmapRep.h"
+#import "ANImageBitmapRep.h"
 
-@interface CroppableBitmapRep : ScalableBitmapRep {
-    
-}
+@interface ANImageBitmapRep (Croppable)
 
 /**
  * Cuts a part of the bitmap out for a new bitmap.

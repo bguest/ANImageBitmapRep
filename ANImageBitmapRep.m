@@ -45,15 +45,6 @@ UIColor * UIColorFromBMPixel (BMPixel pixel) {
 	}
 }
 
-- (void)setQuality:(CGFloat)quality {
-	NSAssert(quality >= 0 && quality <= 1, @"Quality must be between 0 and 1.");
-	if (quality == 1.0) return;
-	CGSize cSize = CGSizeMake((CGFloat)([self bitmapSize].x) * quality, (CGFloat)([self bitmapSize].y) * quality);
-	BMPoint oldSize = [self bitmapSize];
-	[self setSize:BMPointMake(round(cSize.width), round(cSize.height))];
-	[self setSize:oldSize];
-}
-
 - (void)setBrightness:(CGFloat)brightness {
 	NSAssert(brightness >= 0 && brightness <= 2, @"Brightness must be between 0 and 2.");
 	BMPoint size = [self bitmapSize];

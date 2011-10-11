@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CroppableBitmapRep.h"
+#import "ANImageBitmapRep.h"
 
 
-@interface RotatableBitmapRep : CroppableBitmapRep {
-    
-}
+@interface ANImageBitmapRep (Rotatable)
 
 /**
  * Rotate the image bitmap around its center by a certain number of degrees.

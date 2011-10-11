@@ -8,18 +8,7 @@
 
 #import "CGContextCreator.h"
 
-
-@implementation CGContextCreator
-
-- (id)init {
-    if ((self = [super init])) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-+ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size {
+CGContextRef newARGBBitmapContextWithSize(CGSize size) {
 	CGContextRef context = NULL;
     CGColorSpaceRef colorSpace;
     void * bitmapData;
@@ -71,7 +60,7 @@
     return context;	
 }
 
-+ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image {
+CGContextRef newARGBBitmapContextWithImage(CGImageRef image) {
 	CGContextRef context = NULL;
     CGColorSpaceRef colorSpace;
     void * bitmapData;
@@ -128,8 +117,14 @@
     return context;	
 }
 
-- (void)dealloc {
-    [super dealloc];
+@implementation CGContextCreator
+
+
++ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size{
+   return newARGBBitmapContextWithSize(size);
+}
++ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image{
+   return newARGBBitmapContextWithImage(image);
 }
 
 @end

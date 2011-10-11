@@ -17,7 +17,7 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	return p;
 }
 
-@implementation RotatableBitmapRep
+@implementation ANImageBitmapRep (Rotatable)
 
 - (void)rotate:(CGFloat)degrees {
 	if (degrees == 0) return;
@@ -72,7 +72,7 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	offsetCenter.x = (float)((float)newSize.width / 2.0f) - (float)newCenter.x;
 	offsetCenter.y = (float)((float)newSize.height / 2.0f) - (float)newCenter.y;
 	
-	CGContextRef newContext = [CGContextCreator newARGBBitmapContextWithSize:newSize];
+	CGContextRef newContext = newARGBBitmapContextWithSize(newSize);
 	CGContextSaveGState(newContext);
 	CGContextTranslateCTM(newContext, (float)round((float)offsetCenter.x), (float)round((float)offsetCenter.y));
 	
@@ -141,7 +141,7 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	offsetCenter.x = (float)((float)newSize.width / 2.0f) - (float)newCenter.x;
 	offsetCenter.y = (float)((float)newSize.height / 2.0f) - (float)newCenter.y;
 	
-	CGContextRef newContext = [CGContextCreator newARGBBitmapContextWithSize:newSize];
+	CGContextRef newContext = newARGBBitmapContextWithSize(newSize);
 	CGContextSaveGState(newContext);
 	CGContextTranslateCTM(newContext, (float)round((float)offsetCenter.x), (float)round((float)offsetCenter.y));
 	
