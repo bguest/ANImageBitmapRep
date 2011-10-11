@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RotatableBitmapRep.h"
+#import "ANImageBitmapRep+Rotate.h"
 
 #define DEGTORAD(x) (x * (M_PI / 180.0f))
 

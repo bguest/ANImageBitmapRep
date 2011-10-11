@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CroppableBitmapRep.h"
+#import "ANImageBitmapRep+Crop.h"
 
 
 @implementation ANImageBitmapRep (Croppable)

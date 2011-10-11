@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ScalableBitmapRep.h"
+#import "ANImageBitmapRep+Scale.h"
 
 
 @implementation ANImageBitmapRep(Scalable)
