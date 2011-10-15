@@ -8,6 +8,7 @@
 
 #import "UIImage+ANImageBitmapRep.h"
 #import "ANImageBitmapRep.h"
+#import "ANImageBitmapRep+Scale.h"
 
 @implementation UIImage (ANImageBitmapRep)
 
