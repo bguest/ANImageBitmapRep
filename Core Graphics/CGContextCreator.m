@@ -8,7 +8,7 @@
 
 #import "CGContextCreator.h"
 
-CGContextRef newARGBBitmapContextWithSize(CGSize size) {
+CGContextRef ARGBBitmapContextWithSizeCreate(CGSize size) {
 	CGContextRef context = NULL;
     CGColorSpaceRef colorSpace;
     void * bitmapData;
@@ -60,7 +60,7 @@ CGContextRef newARGBBitmapContextWithSize(CGSize size) {
     return context;	
 }
 
-CGContextRef newARGBBitmapContextWithImage(CGImageRef image) {
+CGContextRef ARGBBitmapContextWithImageCreate(CGImageRef image) {
 	CGContextRef context = NULL;
     CGColorSpaceRef colorSpace;
     void * bitmapData;
@@ -121,10 +121,10 @@ CGContextRef newARGBBitmapContextWithImage(CGImageRef image) {
 
 
 + (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size{
-   return newARGBBitmapContextWithSize(size);
+   return ARGBBitmapContextWithSizeCreate(size);
 }
 + (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image{
-   return newARGBBitmapContextWithImage(image);
+   return ARGBBitmapContextWithImageCreate(image);
 }
 
 @end
