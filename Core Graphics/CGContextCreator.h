@@ -14,8 +14,8 @@
  * ANImageBitmapRep.
  */
 
-CGContextRef ARGBBitmapContextWithSizeCreate(CGSize size);
-CGContextRef ARGBBitmapContextWithImageCreate(CGImageRef image);
+CGContextRef ARGBBitmapContextCreateWithSize(CGSize size);
+CGContextRef ARGBBitmapContextCreateWithImage(CGImageRef image);
 
 __attribute__((deprecated("No need for class to do this, use functions instead")))
 @interface CGContextCreator : NSObject {

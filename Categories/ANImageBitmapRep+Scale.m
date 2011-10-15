@@ -12,7 +12,7 @@
 @implementation ANImageBitmapRep(Scalable)
 
 - (void)setSize:(BMPoint)aSize {
-	CGContextRef newContext = ARGBBitmapContextWithSizeCreate(CGSizeMake(aSize.x, aSize.y));
+	CGContextRef newContext = ARGBBitmapContextCreateWithSize(CGSizeMake(aSize.x, aSize.y));
 	CGImageRef image = [self CGImage];
 	CGContextDrawImage(newContext, CGRectMake(0, 0, aSize.x, aSize.y), image);
 	[self setContext:newContext];
@@ -44,7 +44,7 @@
 	
 	CGSize newContentSize = CGSizeMake(oldSize.width * scaleRatio, oldSize.height * scaleRatio);
 	CGImageRef image = [self CGImage];
-	CGContextRef newContext = ARGBBitmapContextWithSizeCreate(CGSizeMake(aSize.x, aSize.y));
+	CGContextRef newContext = ARGBBitmapContextCreateWithSize(CGSizeMake(aSize.x, aSize.y));
 	CGContextDrawImage(newContext, CGRectMake(newSize.width / 2 - (newContentSize.width / 2),
 											  newSize.height / 2 - (newContentSize.height / 2),
 											  newSize.width, newContentSize.height), image);
@@ -68,7 +68,7 @@
 	
 	CGSize newContentSize = CGSizeMake(oldSize.width * scaleRatio, oldSize.height * scaleRatio);
 	CGImageRef image = [self CGImage];
-	CGContextRef newContext = ARGBBitmapContextWithSizeCreate(CGSizeMake(aSize.x, aSize.y));
+	CGContextRef newContext = ARGBBitmapContextCreateWithSize(CGSizeMake(aSize.x, aSize.y));
 	CGContextDrawImage(newContext, CGRectMake(newSize.width / 2 - (newContentSize.width / 2),
 											  newSize.height / 2 - (newContentSize.height / 2),
 											  newSize.width, newContentSize.height), image);

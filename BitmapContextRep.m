@@ -27,7 +27,7 @@ BMPoint BMPointFromPoint (CGPoint point) {
 
 - (id)initWithImage:(UIImage *)image {
 	if ((self = [super init])) {
-		context = ARGBBitmapContextWithImageCreate([image CGImage]);
+		context = ARGBBitmapContextCreateWithImage([image CGImage]);
       bitmapData = CGBitmapContextGetData(context);
 		lastImage = CGBitmapContextCreateImage(context);
 	}
@@ -36,7 +36,7 @@ BMPoint BMPointFromPoint (CGPoint point) {
 
 - (id)initWithSize:(BMPoint)sizePoint {
 	if ((self = [super init])) {
-		context = ARGBBitmapContextWithSizeCreate(CGSizeMake(sizePoint.x, sizePoint.y));
+		context = ARGBBitmapContextCreateWithSize(CGSizeMake(sizePoint.x, sizePoint.y));
 		bitmapData = CGBitmapContextGetData(context);
 		lastImage = CGBitmapContextCreateImage(context);
 	}
