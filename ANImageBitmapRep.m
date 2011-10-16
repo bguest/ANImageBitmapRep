@@ -24,11 +24,11 @@ UIColor * UIColorFromBMPixel (BMPixel pixel) {
 @implementation ANImageBitmapRep
 
 + (ANImageBitmapRep *)imageBitmapRepWithCGSize:(CGSize)avgSize {
-	return [[[ANImageBitmapRep alloc] initWithSize:BMPointMake(round(avgSize.width), round(avgSize.height))] autorelease];
+	return [[ANImageBitmapRep alloc] initWithSize:BMPointMake(round(avgSize.width), round(avgSize.height))];
 }
 
 + (ANImageBitmapRep *)imageBitmapRepWithImage:(UIImage *)anImage {
-	return [[[ANImageBitmapRep alloc] initWithImage:anImage] autorelease];
+	return [[ANImageBitmapRep alloc] initWithImage:anImage];
 }
 
 - (void)invertColors {
@@ -88,7 +88,7 @@ UIColor * UIColorFromBMPixel (BMPixel pixel) {
 }
 
 - (UIImage *)image {
-	return [[[UIImage alloc] initWithCGImage:[self CGImage]] autorelease];
+	return [[UIImage alloc] initWithCGImage:[self CGImage]];
 }
 
 @end

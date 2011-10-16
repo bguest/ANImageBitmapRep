@@ -22,12 +22,11 @@
 
 + (CGImageContainer *)imageContainerWithImage:(CGImageRef)anImage {
 	CGImageContainer * container = [(CGImageContainer *)[CGImageContainer alloc] initWithImage:anImage];
-	return [container autorelease];
+	return container;
 }
 
 - (void)dealloc {
 	CGImageRelease(image);
-	[super dealloc];
 }
 
 @end

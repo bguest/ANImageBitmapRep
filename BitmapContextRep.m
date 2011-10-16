@@ -110,7 +110,6 @@ BMPoint BMPointFromPoint (CGPoint point) {
 	if (lastImage != NULL) {
 		CGImageRelease(lastImage);
 	}
-	[super dealloc];
 }
 
 @end
